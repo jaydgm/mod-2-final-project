@@ -18,14 +18,14 @@ const POIs = [
         vault: true
     },
     {
-        id: 2,
+        id: 3,
         name: 'Classy Courts',
         popularity: 'medium',
         medallion: false,
         vault: false
     },
     {
-        id: 3,
+        id: 4,
         name: 'Ritzy Riviera',
         ppularity: 'medium',
         medallion: true,
