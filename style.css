@@ -2,6 +2,7 @@
     color: white;
 }
 
-.map-container {
+.container {
+    position: relative;
     text-align: center;
 }
