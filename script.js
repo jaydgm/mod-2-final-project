@@ -47,16 +47,19 @@ function addPOItoDOM () {
 
         container.appendChild(poi);
         setPosition();
-        
-        // if (document.getElementById(1).textContent === "Rebels Roost") {
-        //     document.getElementById(1).style.position = "absolute";
-        //     document.getElementById(1).style.backgroundColor = "blue";
-        //     document.getElementById(1).style.fontSize = "12px";
-        //     document.getElementById(1).style.top = "100px";
-        //     document.getElementById(1).style.left= "125px";
-        // }
-        }
+        onCLickPOI(poi);
+    }
     };
+
+// action to take when poi is clicked
+function whenClickedPOI() {
+
+}
+
+// add click event to each poi
+function onCLickPOI(poi) {
+    poi.addEventListener('click',whenClickedPOI);
+};
 
 // put POI names over appropriate poisition on the map
 function setPosition() {
