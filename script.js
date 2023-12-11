@@ -46,16 +46,28 @@ function addPOItoDOM () {
         poi.setAttribute('id', POIs[i].id);
 
         container.appendChild(poi);
+        setPosition();
         
-        if (document.getElementById(1).textContent === "Rebels Roost") {
-            document.getElementById(1).style.position = "absolute";
-            document.getElementById(1).style.backgroundColor = "blue";
-            document.getElementById(1).style.fontSize = "12px";
-            document.getElementById(1).style.top = "100px";
-            document.getElementById(1).style.left= "125px";
-        }
+        // if (document.getElementById(1).textContent === "Rebels Roost") {
+        //     document.getElementById(1).style.position = "absolute";
+        //     document.getElementById(1).style.backgroundColor = "blue";
+        //     document.getElementById(1).style.fontSize = "12px";
+        //     document.getElementById(1).style.top = "100px";
+        //     document.getElementById(1).style.left= "125px";
+        // }
         }
     };
+
+// put POI names over appropriate poisition on the map
+function setPosition() {
+    if (document.getElementById(1).textContent === "Rebels Roost") {
+        document.getElementById(1).style.position = "absolute";
+        document.getElementById(1).style.backgroundColor = "blue";
+        document.getElementById(1).style.fontSize = "12px";
+        document.getElementById(1).style.top = "100px";
+        document.getElementById(1).style.left= "125px";
+    }
+}
 
 
 
