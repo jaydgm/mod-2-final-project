@@ -30,6 +30,50 @@ const POIs = [
         popularity: 'medium',
         medallion: true,
         vault: false
+    },
+    {
+        id: 5,
+        name: 'Ruined Reels',
+        popularity: 'high',
+        medallion: true,
+        vault: false
+    },
+    {
+        id: 6,
+        name: 'Reckless Railways',
+        popularity: 'medium',
+        medallion: true,
+        vault: false
+    },
+    {
+        id: 7,
+        name: 'Grand Glacier',
+        popularity: 'medium',
+        vault: false
+    },
+    {
+        id: 8,
+        name: 'Pleasant Piazza',
+        popularity: 'high',
+        vault: false
+    },
+    {
+        id: 9,
+        name: 'Fencing Fields',
+        popularity: 'high',
+        vault: false
+    },
+    {
+        id: 10,
+        name: 'Hazy Hillside',
+        popularity: 'medium',
+        vault: false
+    },
+    {
+        id: 11,
+        name: 'Snooty Steppes',
+        popularity: 'low',
+        vault: true
     }
 ];
 
@@ -106,7 +150,6 @@ function getPOIContent(index) {
     return 'Popularity: ' + POIs[index].popularity + '<br>' +
             'Medallion: ' + POIs[index].medallion + '<br>' +
             'Vault: ' + POIs[index].vault;
-
 };
 
 
