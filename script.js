@@ -53,22 +53,22 @@ function addPOItoDOM () {
     document.getElementById(1).style.position = "absolute";
     document.getElementById(1).style.fontSize = "12px";
     document.getElementById(1).style.top = "100px";
-    document.getElementById(1).style.left= "125px";
+    document.getElementById(1).style.left= "260px";
 
     document.getElementById(2).style.position = "absolute";
     document.getElementById(2).style.fontSize = "12px";
     document.getElementById(2).style.top = "130px";
-    document.getElementById(2).style.left= "190px";
+    document.getElementById(2).style.left= "340px";
 
     document.getElementById(3).style.position = "absolute";
     document.getElementById(3).style.fontSize = "12px";
     document.getElementById(3).style.top = "100px";
-    document.getElementById(3).style.left= "280px";
+    document.getElementById(3).style.left= "400px";
 
     document.getElementById(4).style.position = "absolute";
     document.getElementById(4).style.fontSize = "12px";
     document.getElementById(4).style.top = "155px";
-    document.getElementById(4).style.left= "80px";
+    document.getElementById(4).style.left= "220px";
     };
 
 // add click event to each poi
@@ -125,17 +125,6 @@ function getPOIContent(index) {
     return 'Popularity: ' + POIs[index].popularity;
 
 };
-
-// put POI names over appropriate poisition on the map
-// function setPosition() {
-//         document.getElementById(1).style.position = "absolute";
-//         document.getElementById(1).style.fontSize = "12px";
-//         document.getElementById(1).style.top = "100px";
-//         document.getElementById(1).style.left= "125px";
-
-
-// }
-
 
 
 // initialize app
