@@ -15,6 +15,7 @@ const POIs = [
         name: 'Lavish Lair',
         popularity: 'high',
         medallion: 'Yes',
+        'Mythic Weapon': 'Oscars Frenzy Auto Shotgun',
         vault: 'Yes'
     },
     {
@@ -43,6 +44,7 @@ const POIs = [
         name: 'Reckless Railways',
         popularity: 'high',
         medallion: 'Yes',
+        'Mythic Weapon': 'Valeria Hyper SMG',
         vault: 'Yes'
     },
     {
@@ -50,6 +52,7 @@ const POIs = [
         name: 'Grand Glacier',
         popularity: 'medium',
         medallion: 'Yes',
+        'Mythic Weapon': 'Montagues Enforcer AR',
         vault: 'Yes'
     },
     {
@@ -64,6 +67,7 @@ const POIs = [
         name: 'Fencing Fields',
         popularity: 'high',
         medallion: 'Yes',
+        'Mythic Weapon': 'Nishas Striker AR',
         vault: 'Yes'
     },
     {
@@ -78,6 +82,7 @@ const POIs = [
         name: 'Snooty Steppes',
         popularity: 'medium',
         medallion: 'Yes',
+        'Mythic Weapon': 'Peter Griffins Hammer Pump Shotgun',
         vault: 'Yes'
     }
 ];
@@ -152,9 +157,17 @@ function getPOIModal(e) {
 
 // returns info for index'd object in POIs
 function getPOIContent(index) {
-    return 'Popularity: ' + POIs[index].popularity + '<br>' +
+    const propertyName = 'Mythic Weapon';
+        if (POIs[index].hasOwnProperty('Mythic Weapon') === true) {
+            return 'Popularity: ' + POIs[index].popularity + '<br>' +
             'Medallion: ' + POIs[index].medallion + '<br>' +
+            'Mythic Weapon: ' + POIs[index]['Mythic Weapon'] + '<br>' +
             'Vault: ' + POIs[index].vault;
+        } else {
+            return 'Popularity: ' + POIs[index].popularity + '<br>' +
+                'Medallion: ' + POIs[index].medallion + '<br>' +
+                'Vault: ' + POIs[index].vault;
+        }
 };
 
 
