@@ -39,6 +39,7 @@ function addPOItoDOM () {
     for (let i=0; i<POIs.length; i++) {
         // create element button
         const poi = document.createElement('button');
+        poi.className = 'poi-'+i;
 
         // set the text content of each poi to the name of the poi
         // make all have an attribute of id=<id>
@@ -49,27 +50,7 @@ function addPOItoDOM () {
         // setPosition();
         onClickPOI(poi);
     }
-    // sets pois to appropriate poistions
-    document.getElementById(1).style.position = "absolute";
-    document.getElementById(1).style.fontSize = "12px";
-    document.getElementById(1).style.top = "100px";
-    document.getElementById(1).style.left= "260px";
-
-    document.getElementById(2).style.position = "absolute";
-    document.getElementById(2).style.fontSize = "12px";
-    document.getElementById(2).style.top = "130px";
-    document.getElementById(2).style.left= "340px";
-
-    document.getElementById(3).style.position = "absolute";
-    document.getElementById(3).style.fontSize = "12px";
-    document.getElementById(3).style.top = "100px";
-    document.getElementById(3).style.left= "400px";
-
-    document.getElementById(4).style.position = "absolute";
-    document.getElementById(4).style.fontSize = "12px";
-    document.getElementById(4).style.top = "155px";
-    document.getElementById(4).style.left= "220px";
-    };
+};
 
 // add click event to each poi
 function onClickPOI(poi) {
