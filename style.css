@@ -9,3 +9,33 @@
     max-width: 800px;
     margin: 0 auto;
 }
+
+.poi-0 {
+    position: absolute;
+    font-size: 12px;
+    top: 100px;
+    left: 260px;
+}
+
+.poi-1 {
+    position: absolute;
+    font-size: 12px;
+    top: 130px;
+    left: 340px;
+}
+
+.poi-2 {
+    position: absolute;
+    font-size: 12px;
+    top: 100px;
+    left: 400px;
+}
+
+.poi-3 {
+    position: absolute;
+    font-size: 12px;
+    top: 155px;
+    left: 220px;
+}
+
+
