@@ -6,74 +6,79 @@ const POIs = [
     {
         id: 1,
         name: 'Rebels Roost',
-        popularity: 'high',
-        medallion: true,
-        vault: true
+        popularity: 'low',
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 2,
         name: 'Lavish Lair',
-        popularity: 'medium',
-        medallion: true,
-        vault: true
+        popularity: 'high',
+        medallion: 'Yes',
+        vault: 'Yes'
     },
     {
         id: 3,
         name: 'Classy Courts',
-        popularity: 'medium',
-        medallion: false,
-        vault: false
+        popularity: 'low',
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 4,
         name: 'Ritzy Rivera',
-        popularity: 'medium',
-        medallion: true,
-        vault: false
+        popularity: 'low',
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 5,
         name: 'Ruined Reels',
-        popularity: 'high',
-        medallion: true,
-        vault: false
+        popularity: 'medium',
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 6,
         name: 'Reckless Railways',
-        popularity: 'medium',
-        medallion: true,
-        vault: false
+        popularity: 'high',
+        medallion: 'Yes',
+        vault: 'Yes'
     },
     {
         id: 7,
         name: 'Grand Glacier',
         popularity: 'medium',
-        vault: false
+        medallion: 'Yes',
+        vault: 'Yes'
     },
     {
         id: 8,
         name: 'Pleasant Piazza',
         popularity: 'high',
-        vault: false
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 9,
         name: 'Fencing Fields',
         popularity: 'high',
-        vault: false
+        medallion: 'Yes',
+        vault: 'Yes'
     },
     {
         id: 10,
         name: 'Hazy Hillside',
-        popularity: 'medium',
-        vault: false
+        popularity: 'low',
+        medallion: 'No',
+        vault: 'No'
     },
     {
         id: 11,
         name: 'Snooty Steppes',
-        popularity: 'low',
-        vault: true
+        popularity: 'medium',
+        medallion: 'Yes',
+        vault: 'Yes'
     }
 ];
 
