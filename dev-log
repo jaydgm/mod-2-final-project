@@ -11,3 +11,14 @@ https://github.com/jaydgm/mod-2-final-project
 - add heading using bootstrap
 - create array of objects in js
 - use DOM to add poi's 
+
+12/11/23 10:00AM - 4:00PM
+- add click functionality to POI's
+- read more on how to use bootstrap modals with DOM
+- add functionality for modal to pop up when clicking POIs
+- add remaining POI's to array of objects
+
+12/12/23 7:00AM - 2:00PM
+- Change navbar for less clutered look
+- add another property for mythic weapon's
+- start implementation of filter dropdown
