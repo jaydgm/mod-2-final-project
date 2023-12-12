@@ -10,6 +10,10 @@
     margin: 0 auto;
 }
 
+.navbar-brand {
+    font-family: Irish Grover, sans-serif;
+}
+
 /* rebels */
 .poi-0 {
     position: absolute;
