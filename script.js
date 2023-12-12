@@ -103,7 +103,9 @@ function getPOIModal(e) {
 
 // returns info for index'd object in POIs
 function getPOIContent(index) {
-    return 'Popularity: ' + POIs[index].popularity;
+    return 'Popularity: ' + POIs[index].popularity + '<br>' +
+            'Medallion: ' + POIs[index].medallion + '<br>' +
+            'Vault: ' + POIs[index].vault;
 
 };
 
