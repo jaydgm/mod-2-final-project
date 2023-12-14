@@ -10,8 +10,16 @@
     margin: 0 auto;
 }
 
+/* .navbar {
+    background-color: 
+} */
+
 .navbar-brand {
     font-family: Irish Grover, sans-serif;
+}
+
+.hidden {
+    display: none;
 }
 
 /* rebels */
