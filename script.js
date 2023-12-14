@@ -1,6 +1,7 @@
 // select the container element in html
 const container = document.querySelector('.container');
 var poiList = Array.from(document.querySelectorAll('.container button'));
+var checkboxes = document.querySelectorAll('.form-check-input');
 
 // create array of objects for POIs
 const POIs = [
@@ -162,97 +163,62 @@ function getPOIContent(index) {
         }
 };
 
-// filter poi's
-function updateFilter (poiList) {
-    let i = 0;
-    // const hasMedallion = POIs[i].medallion;
-    // const popIsHigh = POIs[i].popularity;
-    // const popIsMed = POIs[i].popularity;
-    // const popIsLow = POIs[i].popularity;
-    // const hasVault = POIs[i].vault;
-    const checkMedallion = document.getElementById('check-medallion');
-    const checkPopHigh = document.getElementById('check-pop-high');
-    const checkPopMed = document.getElementById('check-pop-med');
-    const checkPopLow = document.getElementById('check-pop-low');
-    const checkVault = document.getElementById('check-vault');
+// show or hide buttons in response to the 
+//corresponding checkboxes that checked/not checked
+function updateButtons(e) {
+    // variables that store respective checkboxes that are checked
+    var medallionChecked = checkboxes[0].checked;
+    var popHighChecked = checkboxes[1].checked;
+    var popMedChecked = checkboxes[2].checked;
+    var popLowChecked = checkboxes[3].checked;
+    var vaultChecked = checkboxes[4].checked;
 
-
-    checkMedallion.addEventListener('change', function() {
-        for (i=0;i<poiList.length;i++) {
-            if (checkMedallion.checked) {
-                if (POIs[i].medallion === 'No') {
-                    poiList[i].style.display = 'none';
-                }
-            } else {
-                poiList[i].style.display = 'inline-block';
+    // target the checkbox that's checked/unchecked then,
+    // for each button, toggle hidden tag if it meets the
+    // if statement parameters (exp. if a particular poi's
+    // medallion property = 'No', then hide the corresponding
+    // button)
+    if (e.target.id === 'check-medallion') {
+        poiList.forEach(function(poi, index) {
+            if (POIs[index].medallion === 'No') {
+                poiList[index].classList.toggle('hidden',medallionChecked);
             }
-        } 
-    });
-
-    checkPopHigh.addEventListener('change', function () {
-        for (i=0;i<poiList.length;i++) {
-            if (checkPopHigh.checked) {
-
-                if (POIs[i].popularity !== 'high') {
-                    poiList[i].style.display = 'none';
-                }
-            } else if (!(checkPopHigh.checked)) {
-                poiList[i].style.display = 'inline-block';
+        });
+    } else if (e.target.id === 'check-pop-high') {
+        poiList.forEach(function(poi, index) {
+            if (POIs[index].popularity !== 'high') {
+                poiList[index].classList.toggle('hidden', popHighChecked);
             }
-        }
-    });
-
-    checkPopMed.addEventListener('change', function () {
-        for (i=0;i<poiList.length;i++) {
-            if (checkPopMed.checked) {
-
-                if (POIs[i].popularity !== 'medium') {
-                    poiList[i].style.display = 'none';
-                }
-            } else if (!(checkPopHigh.checked)) {
-                poiList[i].style.display = 'inline-block';
+        });
+    } else if (e.target.id === 'check-pop-med') {
+        poiList.forEach(function(poi, index) {
+            if (POIs[index].popularity !== 'medium') {
+                poiList[index].classList.toggle('hidden', popMedChecked);
             }
-        }
-    });
-
-    checkPopLow.addEventListener('change', function () {
-        for (i=0;i<poiList.length;i++) {
-            if (checkPopLow.checked) {
-
-                if (POIs[i].popularity !== 'low') {
-                    poiList[i].style.display = 'none';
-                }
-            } else if (!(checkPopHigh.checked)) {
-                poiList[i].style.display = 'inline-block';
+        });
+    } else if (e.target.id === 'check-pop-low') {
+        poiList.forEach(function(poi, index) {
+            if (POIs[index].popularity !== 'low') {
+                poiList[index].classList.toggle('hidden', popLowChecked);
             }
-        }
-    });
-
-    checkVault.addEventListener('change', function () {
-        for (i=0;i<poiList.length;i++) {
-            if (checkVault.checked) {
-
-                if (POIs[i].vault === 'No') {
-                    poiList[i].style.display = 'none';
-                }
-            } else if (!(checkPopHigh.checked)) {
-                poiList[i].style.display = 'inline-block';
+        });
+    } else if (e.target.id === 'check-vault') {
+        poiList.forEach(function(poi, index) {
+            if (POIs[index].vault === 'No') {
+                poiList[index].classList.toggle('hidden', vaultChecked);
             }
-        }
-    });
-}
-
-function checkUI() {
-    poiList.forEach(function(button) {
-        button.style.display = 'inline-block';
-    })
+        });
+    }
 }
 
 // initialize app
 function init () {
     addPOItoList();
     onClickPOI();
-    updateFilter(poiList)
+    // check if state of each checkbox is changed (checked/unchecked)
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change',updateButtons)
+    });
 };
 
 init();
