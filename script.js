@@ -1,5 +1,6 @@
 // select the container element in html
 const container = document.querySelector('.container');
+var poiList = Array.from(document.querySelectorAll('.container button'));
 
 // create array of objects for POIs
 const POIs = [
@@ -87,28 +88,19 @@ const POIs = [
     }
 ];
 
-// function to loop through POIs array
-// then add to DOM
-function addPOItoDOM () {
-    for (let i=0; i<POIs.length; i++) {
-        // create element button
-        const poi = document.createElement('button');
-        poi.className = 'poi-'+i;
-
-        // set the text content of each poi to the name of the poi
-        // make all have an attribute of id=<id>
-        poi.textContent = POIs[i].name;
-        poi.setAttribute('id', POIs[i].id);
-
-        container.appendChild(poi);
-        // setPosition();
-        onClickPOI(poi);
+// 
+function addPOItoList () {
+    for (let i=0;i<poiList.length;i++) {
+        poiList[i].textContent = POIs[i].name;
+        poiList[i].setAttribute('id',POIs[i].id);
     }
-};
+}
 
 // add click event to each poi
-function onClickPOI(poi) {
-    poi.addEventListener('click',getPOIModal);
+function onClickPOI() {
+    for (let i=0;i<poiList.length;i++) {
+        poiList[i].addEventListener('click',getPOIModal)
+    }
 };
 
 
@@ -170,10 +162,97 @@ function getPOIContent(index) {
         }
 };
 
+// filter poi's
+function updateFilter (poiList) {
+    let i = 0;
+    // const hasMedallion = POIs[i].medallion;
+    // const popIsHigh = POIs[i].popularity;
+    // const popIsMed = POIs[i].popularity;
+    // const popIsLow = POIs[i].popularity;
+    // const hasVault = POIs[i].vault;
+    const checkMedallion = document.getElementById('check-medallion');
+    const checkPopHigh = document.getElementById('check-pop-high');
+    const checkPopMed = document.getElementById('check-pop-med');
+    const checkPopLow = document.getElementById('check-pop-low');
+    const checkVault = document.getElementById('check-vault');
+
+
+    checkMedallion.addEventListener('change', function() {
+        for (i=0;i<poiList.length;i++) {
+            if (checkMedallion.checked) {
+                if (POIs[i].medallion === 'No') {
+                    poiList[i].style.display = 'none';
+                }
+            } else {
+                poiList[i].style.display = 'inline-block';
+            }
+        } 
+    });
+
+    checkPopHigh.addEventListener('change', function () {
+        for (i=0;i<poiList.length;i++) {
+            if (checkPopHigh.checked) {
+
+                if (POIs[i].popularity !== 'high') {
+                    poiList[i].style.display = 'none';
+                }
+            } else if (!(checkPopHigh.checked)) {
+                poiList[i].style.display = 'inline-block';
+            }
+        }
+    });
+
+    checkPopMed.addEventListener('change', function () {
+        for (i=0;i<poiList.length;i++) {
+            if (checkPopMed.checked) {
+
+                if (POIs[i].popularity !== 'medium') {
+                    poiList[i].style.display = 'none';
+                }
+            } else if (!(checkPopHigh.checked)) {
+                poiList[i].style.display = 'inline-block';
+            }
+        }
+    });
+
+    checkPopLow.addEventListener('change', function () {
+        for (i=0;i<poiList.length;i++) {
+            if (checkPopLow.checked) {
+
+                if (POIs[i].popularity !== 'low') {
+                    poiList[i].style.display = 'none';
+                }
+            } else if (!(checkPopHigh.checked)) {
+                poiList[i].style.display = 'inline-block';
+            }
+        }
+    });
+
+    checkVault.addEventListener('change', function () {
+        for (i=0;i<poiList.length;i++) {
+            if (checkVault.checked) {
+
+                if (POIs[i].vault === 'No') {
+                    poiList[i].style.display = 'none';
+                }
+            } else if (!(checkPopHigh.checked)) {
+                poiList[i].style.display = 'inline-block';
+            }
+        }
+    });
+}
+
+function checkUI() {
+    poiList.forEach(function(button) {
+        button.style.display = 'inline-block';
+    })
+}
 
 // initialize app
 function init () {
-    addPOItoDOM();
+    addPOItoList();
+    onClickPOI();
+    updateFilter(poiList)
 };
 
 init();
