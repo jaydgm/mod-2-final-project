@@ -93,7 +93,6 @@ const POIs = [
 function addPOItoList () {
     for (let i=0;i<poiList.length;i++) {
         poiList[i].textContent = POIs[i].name;
-        poiList[i].setAttribute('id',POIs[i].id);
     }
 }
 
@@ -121,13 +120,13 @@ function getPOIModal(e) {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">${POIs[e.target.id-1].name}</h5>
+                    <h5 class="modal-title">${POIs[e.target.title-1].name}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ${getPOIContent(e.target.id-1)}
+                    ${getPOIContent(e.target.title-1)}
                 </div>
             </div>
         </div>
