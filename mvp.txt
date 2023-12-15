@@ -1,0 +1,14 @@
+Fortnite POI GUide
+
+Core functionality:
+- Be able to display all of the POIs of the current Fortnite seasons map, with each POI being a clickable button
+that, when clicked, displays information on that respective POI. 
+- Use cases: 
+	- a new user who is unfamiliar with the map wants to know where is a good place to land that doesn't have 
+		too much traffic, so as to avoid dying early game. they can find the POI's that are low in popularity
+		by checking the POIs info through the clicking of each POI.
+	- a user who has been playing for some time forgets where to get a particular Mythic Weapon. this information
+		can be found by clicking the POI's with medallions.
+- a combination of OOP and functional programming will be implemented.
+- Bootstrap for modals and navbar will be implemented
+
