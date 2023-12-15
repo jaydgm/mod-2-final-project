@@ -32,7 +32,7 @@ const POIs = [
         name: 'Ritzy Rivera',
         popularity: 'low',
         medallion: 'No',
-        vault: 'No'
+        vault: 'Yes'
     },
     {
         id: 5,
@@ -77,7 +77,7 @@ const POIs = [
         name: 'Hazy Hillside',
         popularity: 'low',
         medallion: 'No',
-        vault: 'No'
+        vault: 'Yes'
     },
     {
         id: 11,
