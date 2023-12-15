@@ -1,9 +1,5 @@
 
 
-.title {
-    color: white;
-}
-
 .container {
     position: relative;
     text-align: center;
@@ -16,7 +12,8 @@
     background-color: 
 } */
 
-.navbar-brand {
+.navbar-brand .title {
+    color: white;
     font-family: Irish Grover, sans-serif;
 }
 
