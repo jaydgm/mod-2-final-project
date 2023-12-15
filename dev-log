@@ -22,3 +22,17 @@ https://github.com/jaydgm/mod-2-final-project
 - Change navbar for less clutered look
 - add another property for mythic weapon's
 - start implementation of filter dropdown
+
+12/13/23 10:00AM - 4:00PM
+- Create checkboxes without filter
+- Continue to work on filter for buttons
+- Go back to shopping list porject on Udemy to see how they implemented a filter
+- rework how I was creating/calling buttons to make filtering easier
+
+12/14/23 10:30AM - 4:00PM
+- Finalize function for filter 
+- Finished filter function! still some bugs but core functionality works
+
+12/15/23 1:00PM - 4:00PM
+- Work on UI (positioning and sizing)
+- style buttons to look better
