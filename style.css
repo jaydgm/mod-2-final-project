@@ -1,11 +1,14 @@
-
+body {
+    background-color: #126dac
+}
 
 .container {
     position: relative;
     text-align: center;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* .navbar {
@@ -17,97 +20,125 @@
     font-family: Irish Grover, sans-serif;
 }
 
-.hidden {
+.hidden.poi-button {
     display: none;
 }
 
+.poi-button {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 28px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
 /* rebels */
-.poi-0 {
+#poi-1 {
     position: absolute;
     font-size: 12px;
-    top: 100px;
-    left: 260px;
+    top: 140px;
+    left: 85px;
 }
 
 /* lavish */
-.poi-1 {
+#poi-2 {
     position: absolute;
     font-size: 12px;
-    top: 130px;
-    left: 340px;
+    top: 170px;
+    left: 160px;
 }
 
 /* classy */
-.poi-2 {
+#poi-3 {
     position: absolute;
     font-size: 12px;
-    top: 100px;
-    left: 400px;
+    top: 140px;
+    left: 270px;
 }
 
 /* ritzy */
-.poi-3 {
+#poi-4 {
     position: absolute;
     font-size: 12px;
-    top: 155px;
-    left: 220px;
+    top: 200px;
+    left: 40px;
 }
 
 /* ruined */
-.poi-4 {
+#poi-5 {
     position: absolute;
     font-size: 12px;
-    top: 220px;
-    left: 320px;
+    top: 295px;
+    left: 160px;
 }
 
 /* reckless */
-.poi-5 {
+#poi-6 {
     position: absolute;
     font-size: 12px;
-    top: 190px;
-    left: 370px;
+    top: 250px;
+    left: 200px;
 }
 
 /* grand */
-.poi-6 {
+#poi-7 {
     position: absolute;
     font-size: 12px;
-    top: 180px;
-    left: 480px;
+    top: 240px;
+    left: 340px;
 }
 
 /* pleasant */
-.poi-7 {
-    position: absolute;
-    font-size: 12px;
-    top: 245px;
-    left: 240px;
-}
-
-/* fencing */
-.poi-8 {
-    position: absolute;
-    font-size: 12px;
-    top: 270px;
-    left: 320px;
-}
-
-/* hazy */
-.poi-9 {
-    position: absolute;
-    font-size: 12px;
-    top: 280px;
-    left: 410px;
-}
-
-/* snooty */
-.poi-10 {
+#poi-8 {
     position: absolute;
     font-size: 12px;
     top: 330px;
-    left: 250px;
+    left: 70px;
+}
+
+/* fencing */
+#poi-9 {
+    position: absolute;
+    font-size: 12px;
+    top: 355px;
+    left: 150px;
+}
+
+/* hazy */
+#poi-10 {
+    position: absolute;
+    font-size: 12px;
+    top: 370px;
+    left: 260px;
+}
+
+/* snooty */
+#poi-11 {
+    position: absolute;
+    font-size: 12px;
+    top: 430px;
+    left: 70px;
 }
 
 
-
+  /* @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  } */
