@@ -114,13 +114,13 @@ function getPOIModal(e) {
     modalElement.className = 'modal fade';
 
     // body of modal. with each clicked poi, it will pull the 
-    // corresponding object's info in POIModal using the id #
+    // corresponding object's info in POIs by using the buttons title number
     modalElement.innerHTML = 
         `
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">${POIs[e.target.title-1].name}</h5>
+                    <h5 class="modal-title">${POIs[e.target.title-1].name}</h5> 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

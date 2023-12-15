@@ -11,15 +11,14 @@ body {
     margin-right: auto;
 }
 
-/* .navbar {
-    background-color: 
-} */
-
 .navbar-brand .title {
     color: white;
     font-family: Irish Grover, sans-serif;
 }
 
+/* uses for filter in javascript to hide buttons when applied, 
+also had to include poi-button since its applied to all buttons 
+and wont work w/o it */
 .hidden.poi-button {
     display: none;
 }
@@ -136,9 +135,3 @@ body {
     left: 70px;
 }
 
-
-  /* @media (min-width: 768px) {
-    .button-56 {
-      padding: 0 40px;
-    }
-  } */
