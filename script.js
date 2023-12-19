@@ -90,7 +90,7 @@ const POIs = [
 ];
 
 // 
-function addPOItoList () {
+function addTextToPOI () {
     for (let i=0;i<poiList.length;i++) {
         poiList[i].textContent = POIs[i].name;
     }
@@ -117,7 +117,7 @@ function getPOIModal(e) {
     // corresponding object's info in POIs by using the buttons title number
     modalElement.innerHTML = 
         `
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" id="myModal" role="document" data-backdrop="false">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">${POIs[e.target.title-1].name}</h5> 
@@ -212,7 +212,7 @@ function updateButtons(e) {
 
 // initialize app
 function init () {
-    addPOItoList();
+    addTextToPOI();
     onClickPOI();
     // check if state of each checkbox is changed (checked/unchecked)
     checkboxes.forEach(function(checkbox) {
